@@ -1,14 +1,15 @@
-import React from 'react';
-import RemoteForm from './RemoteForm';
+  import React from 'react';
 import { useForm } from 'react-hook-form';
+import PilihLokasi from './PilihLokasi';
 
-export default function RemoteApp() {
+export function RemoteApp() {
   const form = useForm();
+  const watchedValues = form.watch();
 
   return (
     <div style={{ padding: 20 }}>
       <h3>Remote (standalone)</h3>
-      <RemoteForm props={{ form: form, item: {
+      <PilihLokasi props={{ form: form, item: {
         label: { en: 'First Name', id: 'Nama Depan' },
         name: 'firstName',
         placeholder: 'Enter your first name',
@@ -19,6 +20,10 @@ export default function RemoteApp() {
         disabled: false,
         constraints: { required: true }
       } }} />
+
+      <pre>
+        {JSON.stringify(watchedValues, null, 2)}
+      </pre>
     </div>
   );
 }

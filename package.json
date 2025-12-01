@@ -7,14 +7,17 @@
     "build": "webpack --config webpack.config.js"
   },
   "dependencies": {
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-hook-form": "7.45.1"
+    "leaflet": "^1.9.4",
+    "react": "^19.0.0-rc.1",
+    "react-dom": "^19.0.0-rc.1",
+    "react-hook-form": "7.45.1",
+    "react-leaflet": "^5.0.0"
   },
   "devDependencies": {
     "@babel/core": "7.22.9",
     "@babel/preset-react": "7.22.5",
     "@babel/preset-typescript": "^7.28.5",
+    "@types/leaflet": "^1.9.21",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "babel-loader": "9.1.3",

@@ -18,7 +18,11 @@ module.exports = {
   module: {
     rules: [
       { test: /\.(ts|tsx|js|jsx)$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.css$/, use: ['style-loader', 'css-loader'] }
+      { test: /\.css$/, use: ['style-loader', 'css-loader'] },
+      { 
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        type: 'asset/resource'
+      }
     ]
   },
   plugins: [
