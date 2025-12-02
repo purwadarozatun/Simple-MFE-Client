@@ -30,12 +30,17 @@ module.exports = {
       name: 'remote_form',
       filename: 'remoteEntry.js',
       exposes: {
-        './RemoteForm': './src/RemoteForm.tsx'
+        './RemoteForm': './src/RemoteForm.tsx',
+        './PilihLokasi': './src/PilihLokasi.tsx',
+        './PopupTest': './src/PopupTest.tsx'
       },
       shared: {
-        react: { singleton: true, requiredVersion: '18.2.0' },
-        'react-dom': { singleton: true, requiredVersion: '18.2.0' },
-        'react-hook-form': { singleton: true }
+        react: { singleton: true, },
+        'react-dom': { singleton: true,  },
+        'react-hook-form': { singleton: true },
+        leaflet: { singleton: true },
+        'react-leaflet': { singleton: true },  // ⭐ INI PENTING!
+  
       }
     }),
     new HtmlWebpackPlugin({ template: './public/index.html' })
