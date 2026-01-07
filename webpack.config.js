@@ -27,12 +27,10 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'remote_form',
+      name: 'mokapi_view',
       filename: 'remoteEntry.js',
       exposes: {
-        './RemoteForm': './src/RemoteForm.tsx',
-        './PilihLokasi': './src/PilihLokasi.tsx',
-        './PopupTest': './src/PopupTest.tsx'
+        './create_view': './src/CreateView.tsx',
       },
       shared: {
         react: { singleton: true, },
