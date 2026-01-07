@@ -31,6 +31,10 @@ module.exports = {
       filename: 'remoteEntry.js',
       exposes: {
         './create_view': './src/CreateView.tsx',
+        './edit_view': './src/EditView.tsx',
+        './detail_view': './src/DetailView.tsx',
+        './getData_view': './src/GetDataView.tsx',
+        './postData_view': './src/PostDataView.tsx',
       },
       shared: {
         react: { singleton: true, },
